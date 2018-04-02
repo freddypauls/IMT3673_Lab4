@@ -35,3 +35,14 @@ main {
    border-bottom: 1px solid orange !important;
    box-shadow: 0 1px 0 0 orange !important
  }
+
+.logo-margin {
+    margin-left: 10px;
+    
+}
+
+.navbar-leftSideNav-margin {
+    margin-right: 20px;
+    
+}
+
