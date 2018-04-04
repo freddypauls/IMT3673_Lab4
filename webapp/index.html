@@ -24,47 +24,43 @@
      		<!-- Navigation -->
 				<header>
 					<nav>
-						<div class="nav-wrapper indigo darken-1">
-								<a href="index.html" class="brand-logo">Lab 4</a>
-								<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-								<ul class="right hide-on-med-and-down">
+						<div class="nav-wrapper blue darken-4">
+								<a href="index.html" class="brand-logo logo-margin"> Lab 4 </a>
+								<ul class="right hide-on-med-and-down navbar-leftSideNav-margin">
 									<li><a id="loginLink" href="login.html">Login</a></li>
 									<li><a id="registerLink" href="register.html">Register</a></li>								
 								</ul>
 						</div>
 					</nav>
-					<!-- Mobile Navigation -->
-					<ul class="sidenav" id="mobile-demo">
-					<li><a id="loginLink" href="login.html">Login</a></li>
-					<li><a id="registerLink" href="register.html">Register</a></li>
-				</ul>
 				</header>
     	
     	<!-- Main content -->
      	<main>
 					<div class="container">
 							<div class="row">
-								<div class="col s12 m6">
+								<div class="col m4 l4"></div>
+								<div class="col s12 m4 l4">
 									<div class="card white">
 										<div class="card-content white-text">
 											<span class="card-title black-text">Test</span>
 											<div class="row">
-												<form class="col s12">
+												<div class="col s12">
 													<div class="row">
-														<div class="input-field col s12">
-															<input id="last_name" type="text" class="validate">
-															<label for="last_name">Last Name</label>
-														</div>
+													  <div class="input-field col s12">
+														<textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+														<label for="textarea2">Textarea</label>
+													  </div>
 													</div>
-												</form>
+												</div>
 											</div>
 										</div>
 										<div class="card-action">
 											<a href="#">This is a link</a>
-											<a id="test" onclick="testFunc()" href="#">This is a link</a>
+											<a id="test" href="#">This is a link</a>
 										</div>
 									</div>
 								</div>
+								<div class="col m4 l4"></div>
 							</div>
 					</div>
 			</main>
@@ -88,26 +84,34 @@
         </footer>
      
       
-      	<!-- Firebase setup -->
-      	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-		<script>
-		  // Initialize Firebase
-		  var config = {
-			apiKey: "AIzaSyBd43yxfQwojP9zG6k02by6tHkE5H5Ys64",
-			authDomain: "imt3673-labassignment4.firebaseapp.com",
-			databaseURL: "https://imt3673-labassignment4.firebaseio.com",
-			projectId: "imt3673-labassignment4",
-			storageBucket: "imt3673-labassignment4.appspot.com",
-			messagingSenderId: "833213271359"
-		  };
-		  firebase.initializeApp(config);
-		</script>
+      	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-messaging.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-functions.js"></script>
+
+        <!-- Leave out Storage -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-storage.js"></script> -->
+      
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBd43yxfQwojP9zG6k02by6tHkE5H5Ys64",
+            authDomain: "imt3673-labassignment4.firebaseapp.com",
+            databaseURL: "https://imt3673-labassignment4.firebaseio.com",
+            projectId: "imt3673-labassignment4",
+            storageBucket: "imt3673-labassignment4.appspot.com",
+            messagingSenderId: "833213271359"
+          };
+          firebase.initializeApp(config);
+        </script>
 
 		<!-- Materialize Javascript (for materialize css design framework) -->
 		<script type="text/javascript" src="js/materialize.min.js"></script>
-		<script> 
-			$(document).ready(function(){
-				$('.sidenav').sidenav();
+		<script>
+			$(document).ready(function() {
+				$('input#input_text, textarea#textarea2').characterCounter();
 			});
 		</script>
     
