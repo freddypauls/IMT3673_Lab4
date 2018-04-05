@@ -43,24 +43,24 @@
 							<div class="card-content white-text">
 								<span class="card-title black-text">Register</span>
 									<form>
+										<p class="black-text" id="loginError">Error</p>
 										<div class="row">
 											<div class="input-field col s12">
-													<input id="name" type="text" class="validate">
-													<label for="name">Name</label>
+													<input id="regName" type="text" class="validate">
+													<label for="regName">Name</label>
 											</div>
 											<div class="input-field col s12">
-													<input id="email" type="text" class="validate">
-													<label for="email">Email</label>
+													<input id="regEmail" type="text" class="validate">
+													<label for="regEmail">Email</label>
 											</div>
 											<div class="input-field col s12">
-													<input id="password" type="password" class="validate">
-													<label for="password">Password</label>
+													<input id="regPassword" type="password" class="validate">
+													<label for="regPassword">Password</label>
 											</div>
 										</div>
 									</form>
 								<div class="card-action">
-									<a href="register.html">Register</a>
-									<a id="test" onclick="testFunc()" href="#" class="black-text">Login</a>
+									<button id="regBtn" class="btn waves-effect white black-text z-depth-0" type="submit" name="action">Register</button>
 								</div>
 							</div>
 						</div>
