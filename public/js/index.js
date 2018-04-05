@@ -41,7 +41,7 @@ function addMessage(msg) {
 
 			 var msgTimeElemt =document.createElement("span");
 			 msgTimeElemt.textContent= moment(msg.date).format('MMMM Do YYYY, h:mm:ss a');
-			 msgTimeElemt.className="black-text";
+			 msgTimeElemt.className="grey-text";
 
 			 var hrMsgElement = document.createElement("hr");
 			 
@@ -78,7 +78,7 @@ function addMessage(msg) {
 				});
 
 		//Clears the input field after posting
-		$("#userMsg").val() = '';
+ 		document.getElementById('userMsg').value = '';
 
 	});
 
