@@ -1,3 +1,4 @@
+/*
 $("#loginBtn").click(
 	function(){
 		
@@ -14,11 +15,19 @@ $("#loginBtn").click(
 			
 		}
 		
-});
+});*/
+	
+$("#anonLoginBtn").click(
+	function(){
+		
+		firebase.auth().signInAnonymously();
+		
+	});
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    document.location.href = "index.html";
+    document.location.href = "displayName.html";
 		
   } else {
     // No user is signed in.

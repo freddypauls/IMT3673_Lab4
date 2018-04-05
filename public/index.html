@@ -12,7 +12,10 @@
 				<link rel="stylesheet" href="jquery-ui/jquery-ui.structure.min.css">
 				<link rel="stylesheet" href="jquery-ui/jquery-ui.theme.min.css">
 				<script src="jquery-ui/jquery-ui.min.js"></script>
-				
+			
+				<!-- Moment.js -->
+				<script src="js/moment.js"></script>
+
 				<!-- Personal css -->
 				<link type="text/css" rel="stylesheet" href="css/style.css"/>
 
@@ -25,60 +28,64 @@
 				<header>
 					<nav>
 						<div class="nav-wrapper blue darken-4">
-								<a href="index.html" class="brand-logo logo-margin"> Lab 4 </a>
-								<ul class="right hide-on-med-and-down navbar-leftSideNav-margin">
-									<li><a id="signOut">Sign Out</a></li>							
-								</ul>
+							<a href="index.html" class="brand-logo">Lab 4</a>
+							<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+							<ul class="right hide-on-med-and-down">
+								<li><a href="index.html">Board</a></li>
+								<li><a href="users.html">Users</a></li>
+								<li><a id="signOut">Sign Out</a></li>
+							</ul>
 						</div>
 					</nav>
+
+					<ul class="sidenav" id="mobile-demo">
+						<li><a href="index.html">Board</a></li>
+						<li><a href="users.html">Users</a></li>
+						<hr>
+						<li><a id="signOut">Sign Out</a></li>
+					</ul>
 				</header>
     	
     	<!-- Main content -->
      	<main>
 			<div class="container">
 				<div class="row">
-					<div class="col m4 l4"></div>
-					<div class="col s12 m4 l4">
+					<div class="col m2 l2"></div>
+					<div class="col s12 m8 l8">
 						<div class="card white">
 							<div class="card-content white-text">
-								<span class="card-title black-text">Test</span>
-								<div class="row">
-									<div class="col s12">
-										<div class="row">
-										  <div class="input-field col s12">
-											<textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
-											<label for="textarea2">Textarea</label>
-										  </div>
-										</div>
-									</div>
-								</div>
+								<div id="displayMessageDiv"></div>
+								
 							</div>
 							<div class="card-action">
-								<a href="#">This is a link</a>
-								<a id="test" href="#">This is a link</a>
 							</div>
 						</div>
 					</div>
-					<div class="col m4 l4"></div>
+					<div class="col m2 l2"></div>
 				</div>
 			</div>
 		</main>
 			
+		
+			
 		<!-- Footer -->
-		<footer class="page-footer grey darken-2">
-		  <div class="container">
-			<div class="row">
-			  <div class="col l6 s12">
-				<h5 class="white-text">Footer Content</h5>
-				<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-			  </div>
-			</div>
-		  </div>
-		  <div class="footer-copyright grey darken-3">
-			<div class="container">
-			© 2018 Copyright -- Fredrik Paulsen
-			<a class="grey-text text-lighten-4 right" href="#!">More about me</a>
-			</div>
+		<footer class="page-footer grey">
+		  <div class="footer-copyright grey darken-1 fixed-position">
+				<div class="container">
+					<div class="row bottom-margin" style="margin-bottom: 0px">
+						<div class="col s8 m8 l8">
+							<div class="row bottom-margin">
+								<div class="input-field col s12">
+								<textarea id="userMsg" class="materialize-textarea" data-length="120"></textarea>
+								<label for="userMsg">Input Message</label>
+								</div>
+							</div>
+						</div>
+						<div class="col s4 m4 l4">
+							<button id="sendMsg" class="btn waves-effect indigo darken-3 white-text z-depth-0" style="height: 100%">Send Message</button>
+						</div>	
+					</div>
+				</div>
 		  </div>
 		</footer>
      
@@ -110,8 +117,11 @@
 		<script type="text/javascript" src="js/materialize.min.js"></script>
 		<script>
 			$(document).ready(function() {
-				$('textarea#textarea2').characterCounter();
+				$('textarea#userMsg').characterCounter();
 			});
+			$(document).ready(function(){
+				$('.sidenav').sidenav();
+			})
 		</script>
     
     	<!-- Personal javascript -->
