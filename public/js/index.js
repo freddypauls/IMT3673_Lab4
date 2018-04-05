@@ -113,7 +113,7 @@ function addMessage(msg) {
 
    // Begin listening for data
    startListening();
-/*
+
   // Asks premission to use notifications on click
   var dnperm = document.getElementById("dnperm");
   dnperm.addEventListener('click', function(e) {
@@ -129,4 +129,4 @@ function addMessage(msg) {
         }
       });
     }
-  });*/
+  });
