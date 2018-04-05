@@ -22,6 +22,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 		
   } else {
     // No user is signed in.
-	window.alert("You're not logged in");
+	console.log("You're not logged in");
   }
 });
