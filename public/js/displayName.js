@@ -24,7 +24,7 @@ $('#regNick').click(function() {
 				// An error happened.
 			});
 			
-			$username = firebase.auth().currentUser().displayName();
+			$username = firebase.auth().currentUser.displayName;
 			console.log($username);
 
 			//takes you to the chat view
